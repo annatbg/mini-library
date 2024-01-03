@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Condensed&display=swap");
+
+h1 {
+  font-family: "Lora", serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.content-wrapper {
+  margin: 5rem;
+}
+
+.book-objects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.book-element {
+  aspect-ratio: 3 / 4;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-end;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.896),
+    transparent
+  );
+  border: solid 0.1rem rgba(188, 188, 188, 0.819);
+  cursor: pointer;
+}
+
+.book-title {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+
+.book-author {
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  margin-left: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+#modal {
+  position: relative;
+  margin: 10% auto;
+  height: 50%;
+  width: 70%;
+  background-color: white;
+  padding: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+#modal h2 {
+  width: fit-content;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  /* border: 1px solid black; */
+  text-transform: uppercase;
+}
+
+#modal h3 {
+  width: fit-content;
+  margin-top: 0rem;
+  font-size: 1.5rem;
+  /* border: 1px solid black; */
+}
+
+#modal h4 {
+  width: 80%;
+  margin-top: 0rem;
+  font-size: 1rem;
+  font-weight: 500;
+  /* border: 1px solid black; */
+  line-height: 1.5rem;
+  letter-spacing: 0.03rem;
+  font-style: oblique;
+}
+
+.grid-area {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid black; */
+}
+
+#modal p {
+  margin: 0.2rem;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: rgb(249, 230, 233);
+  /* border: 1px solid black; */
+}
