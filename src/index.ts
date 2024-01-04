@@ -1,4 +1,4 @@
-const bookObjects = document.querySelector(".book-objects"); as HTMLElement
+const bookObjects = document.querySelector(".book-objects") as HTMLElement;
 let overlay = document.getElementById("overlay") as HTMLElement;
 let modal = document.getElementById("modal") as HTMLElement;
 
