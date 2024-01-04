@@ -1,4 +1,6 @@
-const bookObjects = document.querySelector(".book-objects");
+const bookObjects = document.querySelector(".book-objects"); as HTMLElement
+let overlay = document.getElementById("overlay") as HTMLElement;
+let modal = document.getElementById("modal") as HTMLElement;
 
 const BASE_URL =
   "https://my-json-server.typicode.com/zocom-christoffer-wallenberg/books-api/books";
@@ -59,7 +61,6 @@ function createBookElement(book: Book): HTMLDivElement {
     let publisher = (this as HTMLElement).dataset.publisher;
 
     // Fyller modalen med bokinformation
-    let modal = document.getElementById("modal") as HTMLElement;
     modal.innerHTML = `
     <h2>${title}</h2>
     <h3>By ${author}</h3>
@@ -73,7 +74,6 @@ function createBookElement(book: Book): HTMLDivElement {
   `;
 
     // Visa overlayen
-    let overlay = document.getElementById("overlay") as HTMLElement;
     overlay.style.display = "block";
     // lägger till eventlistener på overlay
     overlay.addEventListener("click", function (event) {
@@ -82,7 +82,6 @@ function createBookElement(book: Book): HTMLDivElement {
       }
     });
   });
-
   return bookElement;
 }
 
